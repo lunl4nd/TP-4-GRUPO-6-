@@ -41,8 +41,13 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style4">&nbsp;</td>
+                    <td class="auto-style2">
+                        <asp:Label ID="Label1" runat="server" Font-Bold="True" Text="LOCALIDAD:"></asp:Label>
+                    </td>
+                    <td class="auto-style4">
+                        <asp:DropDownList ID="ddlLocalidadInicio" runat="server">
+                        </asp:DropDownList>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style2">&nbsp;</td>

@@ -10,9 +10,10 @@ namespace TP4_GRUPO_6
 {
     public partial class ejercicio1 : System.Web.UI.Page
     {
-        private const string cadenaconexion = @"Data Source=DESKTOP-H5DSIS0\SQLEXPRESS;Initial Catalog=Viajes;Integrated Security=True";
+        private const string cadenaconexion = @"Data Source=DESKTOP-HP1QFPI\SQLEXPRESS;Initial Catalog=Viajes;Integrated Security=True;Encrypt=False";
         //En la parte de "data source" hay que cambiar el desktop. El que está es de la pc. Si alguno sabe cómo globalizarlo, sería de gran ayuda.
         private const string consulta = "SELECT * FROM Provincias";
+        private const string consulta2 = "SELECT * FROM Localidades";
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -27,6 +28,16 @@ namespace TP4_GRUPO_6
                 {
                     listaprovinicio.Items.Add(datarow["IdProvincia"] + "- " + datarow["NombreProvincia"]);
                 }
+
+                SqlDataAdapter dataAdapter2 = new SqlDataAdapter(consulta2, connection);
+                DataSet dataSet2 = new DataSet();
+                dataAdapter2.Fill(dataSet2, "Tabla Localidades");
+                
+                foreach (DataRow datarow2 in dataSet2.Tables["Tabla Localidades"].Rows)
+                {
+                    ddlLocalidadInicio.Items.Add(datarow2["IdLocalidad"] + "- " + datarow2["NombreLocalidad"]);
+                }
+                connection.Close();
             }
         }
     }
