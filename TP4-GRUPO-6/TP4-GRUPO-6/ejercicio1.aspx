@@ -36,7 +36,7 @@
                         <asp:Label ID="provinciainicio" runat="server" Text="Provincia"></asp:Label>
                         </strong></td>
                     <td class="auto-style4">
-                        <asp:DropDownList ID="listaprovinicio" runat="server">
+                        <asp:DropDownList ID="listaProvinciaInicio" runat="server" AutoPostBack="True" Height="16px" Width="116px">
                         </asp:DropDownList>
                     </td>
                 </tr>
@@ -45,7 +45,7 @@
                         <asp:Label ID="Label1" runat="server" Font-Bold="True" Text="LOCALIDAD:"></asp:Label>
                     </td>
                     <td class="auto-style4">
-                        <asp:DropDownList ID="ddlLocalidadInicio" runat="server">
+                        <asp:DropDownList ID="listaLocalidadesInicio" runat="server">
                         </asp:DropDownList>
                     </td>
                 </tr>

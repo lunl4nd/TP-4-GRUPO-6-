@@ -42,13 +42,13 @@ namespace TP4_GRUPO_6
         protected global::System.Web.UI.WebControls.Label provinciainicio;
 
         /// <summary>
-        /// Control listaprovinicio.
+        /// Control listaProvinciaInicio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList listaprovinicio;
+        protected global::System.Web.UI.WebControls.DropDownList listaProvinciaInicio;
 
         /// <summary>
         /// Control Label1.
@@ -60,12 +60,12 @@ namespace TP4_GRUPO_6
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// Control ddlLocalidadInicio.
+        /// Control listaLocalidadesInicio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlLocalidadInicio;
+        protected global::System.Web.UI.WebControls.DropDownList listaLocalidadesInicio;
     }
 }
