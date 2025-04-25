@@ -54,12 +54,19 @@
                     <td class="auto-style4">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">&nbsp;</td>
+                    <td class="auto-style2">
+                        <asp:Label ID="labelDestinoFinal" runat="server" Text="Destino final:"></asp:Label>
+                    </td>
                     <td class="auto-style4">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style4">&nbsp;</td>
+                    <td class="auto-style2"><strong>
+                        <asp:Label ID="labelProvinciaFinal" runat="server" Text="Provincia"></asp:Label>
+                        </strong></td>
+                    <td class="auto-style4">
+                        <asp:DropDownList ID="ddlProvinciaFinal" runat="server" AutoPostBack="True">
+                        </asp:DropDownList>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style2">&nbsp;</td>

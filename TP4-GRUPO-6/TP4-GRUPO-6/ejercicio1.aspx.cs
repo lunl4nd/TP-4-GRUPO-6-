@@ -31,9 +31,17 @@ namespace TP4_GRUPO_6
 
                 listaProvinciaInicio.Items.Insert(0, "--Selecciona una provincia--");
 
+                ddlProvinciaFinal.DataSource=provinciasReader;
+                ddlProvinciaFinal.DataTextField = "NombreProvincia";
+                ddlProvinciaFinal.DataValueField = "IdProvincia";
+                ddlProvinciaFinal.DataBind();
+                ddlProvinciaFinal.Items.Insert(0, "--Selecciona una provincia--");
+
                 provinciasReader.Close();
 
                 listaLocalidadesInicio.Items.Insert(0,"--Primero seleccione una provincia--");
+
+
                 connection.Close();
             }
         }
@@ -46,6 +54,8 @@ namespace TP4_GRUPO_6
             {
                 listaLocalidadesInicio.Items.Clear();
                 listaLocalidadesInicio.Items.Insert(0, "--Primero seleccione una provincia--");
+                ddlProvinciaFinal.Items.Clear();
+                ddlProvinciaFinal.Items.Insert(0, "--Selecciona una provincia--");
                 return;
             }
 
@@ -67,6 +77,24 @@ namespace TP4_GRUPO_6
                 }
 
             }
+            localidadesReader.Close();
+            SqlCommand nuevoComando = new SqlCommand(consultaProvincias, connection);
+            SqlDataReader provinciasReader = nuevoComando.ExecuteReader();
+            ddlProvinciaFinal.Items.Clear();
+            while (provinciasReader.Read())
+            {
+                int idProvincia = (int)provinciasReader["IdProvincia"];
+                if (provinciaSeleccionada != idProvincia)
+                {
+                    string nombreProvincia = provinciasReader["NombreProvincia"].ToString();
+                    string idLocalidad = provinciasReader["IdProvincia"].ToString();
+                    ddlProvinciaFinal.Items.Add(idLocalidad + "- "+ nombreProvincia);
+                }
+
+            }
+
+            provinciasReader.Close();
+            connection.Close();
         }
     }
 }
