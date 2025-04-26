@@ -22,22 +22,21 @@ namespace TP4_GRUPO_6
                 connection.Open();
 
                 SqlCommand comando = new SqlCommand(consultaProvincias, connection);
-                SqlDataReader provinciasReader = comando.ExecuteReader();
+                SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+                DataTable tablaProvincias = new DataTable();
+                adaptador.Fill(tablaProvincias);
 
-                listaProvinciaInicio.DataSource = provinciasReader;
+                listaProvinciaInicio.DataSource = tablaProvincias;
                 listaProvinciaInicio.DataTextField = "NombreProvincia";
                 listaProvinciaInicio.DataValueField = "IdProvincia";
                 listaProvinciaInicio.DataBind();
-
                 listaProvinciaInicio.Items.Insert(0, "--Selecciona una provincia--");
 
-                ddlProvinciaFinal.DataSource = provinciasReader;
+                ddlProvinciaFinal.DataSource = tablaProvincias;
                 ddlProvinciaFinal.DataTextField = "NombreProvincia";
                 ddlProvinciaFinal.DataValueField = "IdProvincia";
                 ddlProvinciaFinal.DataBind();
                 ddlProvinciaFinal.Items.Insert(0, "--Selecciona una provincia--");
-
-                provinciasReader.Close();
 
                 listaLocalidadesInicio.Items.Insert(0, "--Primero seleccione una provincia--");
 

@@ -36,7 +36,7 @@
                         <asp:Label ID="provinciainicio" runat="server" Text="Provincia"></asp:Label>
                         </strong></td>
                     <td class="auto-style4">
-                        <asp:DropDownList ID="listaProvinciaInicio" runat="server" AutoPostBack="True" Height="16px" Width="116px" OnSelectedIndexChanged="listaProvinciaInicio_SelectedIndexChanged">
+                        <asp:DropDownList ID="listaProvinciaInicio" runat="server" AutoPostBack="True" Height="23px" Width="125px" OnSelectedIndexChanged="listaProvinciaInicio_SelectedIndexChanged">
                         </asp:DropDownList>
                     </td>
                 </tr>
@@ -45,7 +45,7 @@
                         <asp:Label ID="Label1" runat="server" Font-Bold="True" Text="LOCALIDAD:"></asp:Label>
                     </td>
                     <td class="auto-style4">
-                        <asp:DropDownList ID="listaLocalidadesInicio" runat="server" Height="16px" Width="115px">
+                        <asp:DropDownList ID="listaLocalidadesInicio" runat="server" Height="23px" Width="125px" AutoPostBack="True">
                         </asp:DropDownList>
                     </td>
                 </tr>
@@ -64,7 +64,7 @@
                         <asp:Label ID="labelProvinciaFinal" runat="server" Text="Provincia"></asp:Label>
                         </strong></td>
                     <td class="auto-style4">
-                        <asp:DropDownList ID="ddlProvinciaFinal" runat="server" AutoPostBack="True" Height="16px" OnSelectedIndexChanged="ddlProvinciaFinal_SelectedIndexChanged" Width="110px">
+                        <asp:DropDownList ID="ddlProvinciaFinal" runat="server" AutoPostBack="True" Height="23px" OnSelectedIndexChanged="ddlProvinciaFinal_SelectedIndexChanged" Width="125px">
                         </asp:DropDownList>
                     </td>
                 </tr>
@@ -73,7 +73,7 @@
                         <asp:Label ID="locafinal" runat="server" Text="Localidad"></asp:Label>
                         </strong></td>
                     <td class="auto-style4">
-                        <asp:DropDownList ID="listLocalidadesFinal" runat="server" Height="16px" Width="107px">
+                        <asp:DropDownList ID="listLocalidadesFinal" runat="server" Height="23px" Width="125px" AutoPostBack="True">
                         </asp:DropDownList>
                     </td>
                 </tr>
