@@ -24,7 +24,7 @@ namespace TP4_GRUPO_6
                     SqlDataReader productosReader = comando.ExecuteReader();
                     grillaProductos.DataSource = productosReader;
                     grillaProductos.DataBind();
-
+                    conexion.Close();
                 }
             }
         }
@@ -137,5 +137,16 @@ namespace TP4_GRUPO_6
                 txtProducto.Text = "";
         }
 
+        protected void quitarFiltro_Click(object sender, EventArgs e)
+        {
+            SqlConnection conexion = new SqlConnection(cadenaConexion);
+            conexion.Open();
+            SqlCommand command = new SqlCommand(consultaProductos, conexion);
+            SqlDataReader productosReader = command.ExecuteReader();
+            grillaProductos.DataSource = productosReader;
+            grillaProductos.DataBind();
+            productosReader.Close();
+            conexion.Close();
+        }
     }
 }

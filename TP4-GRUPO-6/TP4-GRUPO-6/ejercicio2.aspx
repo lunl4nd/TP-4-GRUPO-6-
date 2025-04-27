@@ -88,7 +88,7 @@
                     <td class="auto-style2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Button ID="filtrar" runat="server" OnClick="filtrar_Click" Text="Filtrar" ValidationGroup="1" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="quitarFiltro" runat="server" Text="Quitar Filtro" />
+                        <asp:Button ID="quitarFiltro" runat="server" Text="Quitar Filtro" OnClick="quitarFiltro_Click" />
                     </td>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
                     <td>&nbsp;</td>
