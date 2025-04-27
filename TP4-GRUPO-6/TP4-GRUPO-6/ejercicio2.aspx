@@ -24,7 +24,7 @@
                         <asp:Label ID="Label1" runat="server" Text="Id Producto:"></asp:Label>
 &nbsp;&nbsp;
                         <asp:TextBox ID="txtProducto" runat="server"></asp:TextBox>
-&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtProducto" Font-Bold="True" ForeColor="Red" ValidationGroup="1">debe ingresar un id Producto</asp:RequiredFieldValidator>
+&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtProducto" Font-Bold="True" ForeColor="Red" ValidationGroup="grupo1">debe ingresar un id Producto</asp:RequiredFieldValidator>
                     </td>
                     <td>&nbsp; </td>
                     <td>&nbsp;</td>
@@ -38,6 +38,7 @@
                         <asp:Label ID="Label2" runat="server" Text="Id Categoria:"></asp:Label>
 &nbsp;
                         <asp:TextBox ID="txtCategoria" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvIDCategoria" runat="server" ControlToValidate="txtCategoria" Font-Bold="True" ForeColor="Red" ValidationGroup="grupo1">Ingrese un ID Categoria</asp:RequiredFieldValidator>
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
