@@ -33,6 +33,15 @@ namespace TP4_GRUPO_6
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
+        /// Control ddlProducto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlProducto;
+
+        /// <summary>
         /// Control txtProducto.
         /// </summary>
         /// <remarks>
@@ -58,6 +67,15 @@ namespace TP4_GRUPO_6
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label2;
+
+        /// <summary>
+        /// Control ddlCategoria.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlCategoria;
 
         /// <summary>
         /// Control txtCategoria.

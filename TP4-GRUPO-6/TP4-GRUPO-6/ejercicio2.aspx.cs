@@ -34,9 +34,39 @@ namespace TP4_GRUPO_6
             int idProductoSeleccionado;
             int idCategoriaSeleccionada;
 
+            string operacionProducto = "";
+            string operacionCategoria = "";
+
+            switch (int.Parse(ddlProducto.SelectedValue))
+            {
+                case 0:
+                    operacionProducto = "=";
+                    break;
+                case 1:
+                    operacionProducto = ">";
+                    break;
+                case 2:
+                    operacionProducto = "<";
+                    break;
+            }
+
+            switch (int.Parse(ddlCategoria.SelectedValue))
+            {
+                case 0:
+                    operacionCategoria = "=";
+                    break;
+                case 1:
+                    operacionCategoria = ">";
+                    break;
+                case 2:
+                    operacionCategoria = "<";
+                    break;
+            }
+
+
             if (int.TryParse(txtProducto.Text, out idProductoSeleccionado))
             {
-                string filtradoPorIdProducto = "SELECT IdProducto, NombreProducto, IdCategoría, CantidadPorUnidad FROM Productos WHERE IdProducto = @IdProducto";
+                string filtradoPorIdProducto = "SELECT IdProducto, NombreProducto, IdCategoría, CantidadPorUnidad FROM Productos WHERE IdProducto " + operacionProducto + " @IdProducto";
                 using (SqlConnection conexion = new SqlConnection(cadenaConexion))
                 {
                     conexion.Open();
@@ -52,7 +82,7 @@ namespace TP4_GRUPO_6
 
             if (int.TryParse(txtCategoria.Text, out idCategoriaSeleccionada))
             {
-                string filtradoPorIdCategoria = "SELECT IdProducto, NombreProducto, IdCategoría, CantidadPorUnidad FROM Productos WHERE IdCategoría = @IdCategoria";
+                string filtradoPorIdCategoria = "SELECT IdProducto, NombreProducto, IdCategoría, CantidadPorUnidad FROM Productos WHERE IdCategoría " + operacionCategoria +" @IdCategoria";
 
                 using (SqlConnection conexion = new SqlConnection(cadenaConexion))
                 {
@@ -69,7 +99,7 @@ namespace TP4_GRUPO_6
 
             if (int.TryParse(txtProducto.Text, out idProductoSeleccionado) && int.TryParse(txtCategoria.Text, out idCategoriaSeleccionada))
             {
-                string filtradoPorIdCategoria = "SELECT IdProducto, NombreProducto, IdCategoría, CantidadPorUnidad FROM Productos WHERE IdProducto = @IdProducto AND IdCategoría = @IdCategoria";
+                string filtradoPorIdCategoria = "SELECT IdProducto, NombreProducto, IdCategoría, CantidadPorUnidad FROM Productos WHERE IdProducto " + operacionProducto + " @IdProducto AND IdCategoría " + operacionCategoria +" @IdCategoria";
 
                 using (SqlConnection conexion = new SqlConnection(cadenaConexion))
                 {
@@ -106,5 +136,6 @@ namespace TP4_GRUPO_6
                 txtCategoria.Text = "";
                 txtProducto.Text = "";
         }
+
     }
 }
