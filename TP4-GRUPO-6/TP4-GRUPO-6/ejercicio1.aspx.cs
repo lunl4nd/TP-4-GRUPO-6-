@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
+using System.Configuration;
 namespace TP4_GRUPO_6
 {
     public partial class ejercicio1 : System.Web.UI.Page
@@ -48,6 +49,10 @@ namespace TP4_GRUPO_6
 
         protected void listaProvinciaInicio_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (listaProvinciaInicio.SelectedValue == ddlProvinciaFinal.SelectedValue)
+            {
+                listLocalidadesFinal.Items.Clear();
+            }
 
             int provinciaSeleccionada;
             if (!int.TryParse(listaProvinciaInicio.SelectedValue, out provinciaSeleccionada))
@@ -97,19 +102,24 @@ namespace TP4_GRUPO_6
 
             }
             provinciasReader.Close();
+            fillLocalidades();
             connection.Close();
         }
 
         protected void ddlProvinciaFinal_SelectedIndexChanged(object sender, EventArgs e)
         {
+            fillLocalidades();
+        }
+
+        protected void fillLocalidades()
+        {
             int provinciaSeleccionadaFinal;
             if (!int.TryParse(ddlProvinciaFinal.SelectedValue, out provinciaSeleccionadaFinal))
             {
                 listLocalidadesFinal.Items.Clear();
-                listLocalidadesFinal.Items.Insert(0,new ListItem("--Primero seleccione una provincia destino--","0"));
+                listLocalidadesFinal.Items.Insert(0, new ListItem("--Primero seleccione una provincia destino--", "0"));
                 return;
             }
-            
 
             SqlConnection connection = new SqlConnection(cadenaconexion);
             connection.Open();
@@ -123,9 +133,10 @@ namespace TP4_GRUPO_6
             listLocalidadesFinal.DataTextField = "NombreLocalidad";
             listLocalidadesFinal.DataValueField = "IdLocalidad";
             listLocalidadesFinal.DataBind();
-
-            
             connection.Close();
+
         }
+
     }
+
 }
