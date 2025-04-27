@@ -3,6 +3,8 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
+
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
@@ -19,6 +21,14 @@
         .auto-style4 {
             width: 505px;
         }
+        .auto-style5 {
+            width: 106px;
+            height: 30px;
+        }
+        .auto-style6 {
+            width: 505px;
+            height: 30px;
+        }
     </style>
 </head>
 <body>
@@ -32,10 +42,10 @@
                     <td class="auto-style4">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style2"><strong>
+                    <td class="auto-style5"><strong>
                         <asp:Label ID="provinciainicio" runat="server" Text="Provincia"></asp:Label>
                         </strong></td>
-                    <td class="auto-style4">
+                    <td class="auto-style6">
                         <asp:DropDownList ID="listaProvinciaInicio" runat="server" AutoPostBack="True" Height="23px" Width="125px" OnSelectedIndexChanged="listaProvinciaInicio_SelectedIndexChanged">
                         </asp:DropDownList>
                     </td>

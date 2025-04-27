@@ -36,10 +36,11 @@ namespace TP4_GRUPO_6
                 ddlProvinciaFinal.DataTextField = "NombreProvincia";
                 ddlProvinciaFinal.DataValueField = "IdProvincia";
                 ddlProvinciaFinal.DataBind();
-                ddlProvinciaFinal.Items.Insert(0, "--Selecciona una provincia--");
+                ddlProvinciaFinal.Items.Insert(0, new ListItem("--Selecciona una provincia--", "0"));
 
-                listaLocalidadesInicio.Items.Insert(0, "--Primero seleccione una provincia--");
+                listaLocalidadesInicio.Items.Insert(0, new ListItem("--Primero seleccione una provincia--", "0"));
 
+                
 
                 connection.Close();
             }
@@ -52,14 +53,18 @@ namespace TP4_GRUPO_6
             if (!int.TryParse(listaProvinciaInicio.SelectedValue, out provinciaSeleccionada))
             {
                 listaLocalidadesInicio.Items.Clear();
-                listaLocalidadesInicio.Items.Insert(0, "--Primero seleccione una provincia--");
+                listaLocalidadesInicio.Items.Insert(0,new ListItem("--Primero seleccione una provincia--","0"));
                 ddlProvinciaFinal.Items.Clear();
-                ddlProvinciaFinal.Items.Insert(0, "--Selecciona una provincia--");
+                ddlProvinciaFinal.Items.Insert(0,new ListItem ("--Selecciona una provincia--","0"));
+                
                 return;
             }
+            
 
             SqlConnection connection = new SqlConnection(cadenaconexion);
             connection.Open();
+           
+
             SqlCommand comando = new SqlCommand(consultaLocalidades, connection);
             SqlDataReader localidadesReader = comando.ExecuteReader();
             listaLocalidadesInicio.Items.Clear();
@@ -72,7 +77,7 @@ namespace TP4_GRUPO_6
                     string nombreLocalidad = localidadesReader["NombreLocalidad"].ToString();
                     string IdLocalidad = localidadesReader["IdLocalidad"].ToString();
 
-                    listaLocalidadesInicio.Items.Add(IdLocalidad + "- " + nombreLocalidad);
+                    listaLocalidadesInicio.Items.Add(new ListItem(nombreLocalidad, IdLocalidad));
                 }
 
             }
@@ -87,7 +92,7 @@ namespace TP4_GRUPO_6
                 {
                     string nombreProvincia = provinciasReader["NombreProvincia"].ToString();
                     string idLocalidad = provinciasReader["IdProvincia"].ToString();
-                    ddlProvinciaFinal.Items.Add(idLocalidad + "- " + nombreProvincia);
+                    ddlProvinciaFinal.Items.Add(new ListItem(nombreProvincia,idProvincia.ToString()));
                 }
 
             }
@@ -101,32 +106,25 @@ namespace TP4_GRUPO_6
             if (!int.TryParse(ddlProvinciaFinal.SelectedValue, out provinciaSeleccionadaFinal))
             {
                 listLocalidadesFinal.Items.Clear();
-                listLocalidadesFinal.Items.Insert(0, "--Primero seleccione una provincia destino--");
+                listLocalidadesFinal.Items.Insert(0,new ListItem("--Primero seleccione una provincia destino--","0"));
                 return;
             }
+            
 
             SqlConnection connection = new SqlConnection(cadenaconexion);
             connection.Open();
 
-            SqlCommand comando = new SqlCommand(consultaLocalidades, connection);
-            SqlDataReader localidadesReader = comando.ExecuteReader();
+            string localidadPorProvincia = "SELECT * FROM Localidades WHERE IdProvincia = @IdProvincia";
+            SqlCommand comando = new SqlCommand(localidadPorProvincia, connection);
+            comando.Parameters.AddWithValue("@IdProvincia", provinciaSeleccionadaFinal);
+            SqlDataReader localidadadesReader = comando.ExecuteReader();
 
-            listLocalidadesFinal.Items.Clear();
-            listLocalidadesFinal.Items.Insert(0, "--Seleccione una localidad destino--");
+            listLocalidadesFinal.DataSource = localidadadesReader;
+            listLocalidadesFinal.DataTextField = "NombreLocalidad";
+            listLocalidadesFinal.DataValueField = "IdLocalidad";
+            listLocalidadesFinal.DataBind();
 
-            while (localidadesReader.Read())
-            {
-                int idProvincia = (int)localidadesReader["IdProvincia"];
-                if (provinciaSeleccionadaFinal == idProvincia)
-                {
-                    string nombreLocalidad = localidadesReader["NombreLocalidad"].ToString();
-                    string idLocalidad = localidadesReader["IdLocalidad"].ToString();
-
-                    listLocalidadesFinal.Items.Add(idLocalidad + "- " + nombreLocalidad);
-                }
-            }
-
-            localidadesReader.Close();
+            
             connection.Close();
         }
     }
