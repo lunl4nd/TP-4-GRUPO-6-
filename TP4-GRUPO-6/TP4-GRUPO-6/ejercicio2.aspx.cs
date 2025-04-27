@@ -25,7 +25,7 @@ namespace TP4_GRUPO_6
                     grillaProductos.DataSource = productosReader;
                     grillaProductos.DataBind();
 
-                }   
+                }
             }
         }
 
@@ -34,7 +34,7 @@ namespace TP4_GRUPO_6
             int idProductoSeleccionado;
             int idCategoriaSeleccionada;
 
-            if (int.TryParse(txtProducto.Text,out idProductoSeleccionado))
+            if (int.TryParse(txtProducto.Text, out idProductoSeleccionado))
             {
                 string filtradoPorIdProducto = "SELECT IdProducto, NombreProducto, IdCategoría, CantidadPorUnidad FROM Productos WHERE IdProducto = @IdProducto";
                 using (SqlConnection conexion = new SqlConnection(cadenaConexion))
@@ -69,12 +69,12 @@ namespace TP4_GRUPO_6
 
             if (int.TryParse(txtProducto.Text, out idProductoSeleccionado) && int.TryParse(txtCategoria.Text, out idCategoriaSeleccionada))
             {
-                string filtradoPorIds= "SELECT IdProducto, NombreProducto, IdCategoría, CantidadPorUnidad FROM Productos WHERE IdProducto = @IdProducto AND IdCategoría = @IdCategoria";
+                string filtradoPorIdCategoria = "SELECT IdProducto, NombreProducto, IdCategoría, CantidadPorUnidad FROM Productos WHERE IdProducto = @IdProducto AND IdCategoría = @IdCategoria";
 
                 using (SqlConnection conexion = new SqlConnection(cadenaConexion))
                 {
                     conexion.Open();
-                    SqlCommand comando = new SqlCommand(filtradoPorIds, conexion);
+                    SqlCommand comando = new SqlCommand(filtradoPorIdCategoria, conexion);
                     comando.Parameters.AddWithValue("@IdProducto", idProductoSeleccionado);
                     comando.Parameters.AddWithValue("@IdCategoria", idCategoriaSeleccionada);
 
@@ -84,6 +84,27 @@ namespace TP4_GRUPO_6
                     grillaProductos.DataBind();
                 }
             }
+            if (string.IsNullOrWhiteSpace(txtProducto.Text) && string.IsNullOrWhiteSpace(txtCategoria.Text))
+            {
+
+                using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+                {
+                    conexion.Open();
+                    string traertodo = "SELECT * FROM productos";
+                    SqlCommand comando = new SqlCommand(traertodo, conexion);
+
+                    SqlDataReader productosReader = comando.ExecuteReader();
+                    grillaProductos.DataSource = productosReader;
+                    grillaProductos.DataBind();
+
+                    productosReader.Close();
+                    conexion.Close();
+                }
+
+                
+            }
+                txtCategoria.Text = "";
+                txtProducto.Text = "";
         }
     }
 }
