@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="ejercicio1.aspx" />
     <Content Include="Web.config" />
+    <Content Include="ejercicio2.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ejercicio1.aspx.cs">
@@ -79,6 +80,13 @@
       <DependentUpon>ejercicio1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ejercicio2.aspx.cs">
+      <DependentUpon>ejercicio2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ejercicio2.aspx.designer.cs">
+      <DependentUpon>ejercicio2.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
