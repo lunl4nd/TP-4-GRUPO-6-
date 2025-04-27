@@ -69,12 +69,12 @@ namespace TP4_GRUPO_6
 
             if (int.TryParse(txtProducto.Text, out idProductoSeleccionado) && int.TryParse(txtCategoria.Text, out idCategoriaSeleccionada))
             {
-                string filtradoPorIdCategoria = "SELECT IdProducto, NombreProducto, IdCategoría, CantidadPorUnidad FROM Productos WHERE IdProducto = @IdProducto AND IdCategoría = @IdCategoria";
+                string filtradoPorIds= "SELECT IdProducto, NombreProducto, IdCategoría, CantidadPorUnidad FROM Productos WHERE IdProducto = @IdProducto AND IdCategoría = @IdCategoria";
 
                 using (SqlConnection conexion = new SqlConnection(cadenaConexion))
                 {
                     conexion.Open();
-                    SqlCommand comando = new SqlCommand(filtradoPorIdCategoria, conexion);
+                    SqlCommand comando = new SqlCommand(filtradoPorIds, conexion);
                     comando.Parameters.AddWithValue("@IdProducto", idProductoSeleccionado);
                     comando.Parameters.AddWithValue("@IdCategoria", idCategoriaSeleccionada);
 
