@@ -1,14 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\alten\\Documents\\TP-4-GRUPO-6-\\TP4-GRUPO-6\\",
+  "WorkspaceRootPath": "C:\\Users\\Elvis\\OneDrive - frgp.utn.edu.ar\\Desktop\\Escritorio\\TP-4-GRUPO-6-\\TP4-GRUPO-6\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3FAC9937-60EF-48D8-8AE2-71CA7B66FFA5}|TP4-GRUPO-6\\TP4-GRUPO-6.csproj|c:\\users\\alten\\documents\\tp-4-grupo-6-\\tp4-grupo-6\\tp4-grupo-6\\ejercicio2.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3FAC9937-60EF-48D8-8AE2-71CA7B66FFA5}|TP4-GRUPO-6\\TP4-GRUPO-6.csproj|solutionrelative:tp4-grupo-6\\ejercicio2.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3FAC9937-60EF-48D8-8AE2-71CA7B66FFA5}|TP4-GRUPO-6\\TP4-GRUPO-6.csproj|c:\\users\\elvis\\onedrive - frgp.utn.edu.ar\\desktop\\escritorio\\tp-4-grupo-6-\\tp4-grupo-6\\tp4-grupo-6\\ejercicio3.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FAC9937-60EF-48D8-8AE2-71CA7B66FFA5}|TP4-GRUPO-6\\TP4-GRUPO-6.csproj|solutionrelative:tp4-grupo-6\\ejercicio3.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3FAC9937-60EF-48D8-8AE2-71CA7B66FFA5}|TP4-GRUPO-6\\TP4-GRUPO-6.csproj|C:\\Users\\alten\\Documents\\TP-4-GRUPO-6-\\TP4-GRUPO-6\\tp4-grupo-6\\ejercicio2.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{3FAC9937-60EF-48D8-8AE2-71CA7B66FFA5}|TP4-GRUPO-6\\TP4-GRUPO-6.csproj|solutionrelative:tp4-grupo-6\\ejercicio2.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{3FAC9937-60EF-48D8-8AE2-71CA7B66FFA5}|TP4-GRUPO-6\\TP4-GRUPO-6.csproj|c:\\users\\elvis\\onedrive - frgp.utn.edu.ar\\desktop\\escritorio\\tp-4-grupo-6-\\tp4-grupo-6\\tp4-grupo-6\\ejercicio3b.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FAC9937-60EF-48D8-8AE2-71CA7B66FFA5}|TP4-GRUPO-6\\TP4-GRUPO-6.csproj|solutionrelative:tp4-grupo-6\\ejercicio3b.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FAC9937-60EF-48D8-8AE2-71CA7B66FFA5}|TP4-GRUPO-6\\TP4-GRUPO-6.csproj|c:\\users\\elvis\\onedrive - frgp.utn.edu.ar\\desktop\\escritorio\\tp-4-grupo-6-\\tp4-grupo-6\\tp4-grupo-6\\ejercicio3b.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3FAC9937-60EF-48D8-8AE2-71CA7B66FFA5}|TP4-GRUPO-6\\TP4-GRUPO-6.csproj|solutionrelative:tp4-grupo-6\\ejercicio3b.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FAC9937-60EF-48D8-8AE2-71CA7B66FFA5}|TP4-GRUPO-6\\TP4-GRUPO-6.csproj|c:\\users\\elvis\\onedrive - frgp.utn.edu.ar\\desktop\\escritorio\\tp-4-grupo-6-\\tp4-grupo-6\\tp4-grupo-6\\ejercicio3.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3FAC9937-60EF-48D8-8AE2-71CA7B66FFA5}|TP4-GRUPO-6\\TP4-GRUPO-6.csproj|solutionrelative:tp4-grupo-6\\ejercicio3.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,28 +34,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ejercicio2.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\alten\\Documents\\TP-4-GRUPO-6-\\TP4-GRUPO-6\\TP4-GRUPO-6\\ejercicio2.aspx.cs",
-              "RelativeDocumentMoniker": "TP4-GRUPO-6\\ejercicio2.aspx.cs",
-              "ToolTip": "C:\\Users\\alten\\Documents\\TP-4-GRUPO-6-\\TP4-GRUPO-6\\TP4-GRUPO-6\\ejercicio2.aspx.cs",
-              "RelativeToolTip": "TP4-GRUPO-6\\ejercicio2.aspx.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAAwGwAAABdAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ejercicio3b.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Elvis\\OneDrive - frgp.utn.edu.ar\\Desktop\\Escritorio\\TP-4-GRUPO-6-\\TP4-GRUPO-6\\TP4-GRUPO-6\\ejercicio3b.aspx.cs",
+              "RelativeDocumentMoniker": "TP4-GRUPO-6\\ejercicio3b.aspx.cs",
+              "ToolTip": "C:\\Users\\Elvis\\OneDrive - frgp.utn.edu.ar\\Desktop\\Escritorio\\TP-4-GRUPO-6-\\TP4-GRUPO-6\\TP4-GRUPO-6\\ejercicio3b.aspx.cs",
+              "RelativeToolTip": "TP4-GRUPO-6\\ejercicio3b.aspx.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAswBQAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T17:15:20.445Z",
+              "WhenOpened": "2025-04-27T22:01:07.925Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ejercicio2.aspx",
-              "DocumentMoniker": "C:\\Users\\alten\\Documents\\TP-4-GRUPO-6-\\TP4-GRUPO-6\\TP4-GRUPO-6\\ejercicio2.aspx",
-              "RelativeDocumentMoniker": "TP4-GRUPO-6\\ejercicio2.aspx",
-              "ToolTip": "C:\\Users\\alten\\Documents\\TP-4-GRUPO-6-\\TP4-GRUPO-6\\TP4-GRUPO-6\\ejercicio2.aspx",
-              "RelativeToolTip": "TP4-GRUPO-6\\ejercicio2.aspx",
+              "DocumentIndex": 2,
+              "Title": "ejercicio3b.aspx",
+              "DocumentMoniker": "C:\\Users\\Elvis\\OneDrive - frgp.utn.edu.ar\\Desktop\\Escritorio\\TP-4-GRUPO-6-\\TP4-GRUPO-6\\TP4-GRUPO-6\\ejercicio3b.aspx",
+              "RelativeDocumentMoniker": "TP4-GRUPO-6\\ejercicio3b.aspx",
+              "ToolTip": "C:\\Users\\Elvis\\OneDrive - frgp.utn.edu.ar\\Desktop\\Escritorio\\TP-4-GRUPO-6-\\TP4-GRUPO-6\\TP4-GRUPO-6\\ejercicio3b.aspx",
+              "RelativeToolTip": "TP4-GRUPO-6\\ejercicio3b.aspx",
               "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-04-27T17:12:10.753Z",
+              "WhenOpened": "2025-04-27T21:58:35.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ejercicio3.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Elvis\\OneDrive - frgp.utn.edu.ar\\Desktop\\Escritorio\\TP-4-GRUPO-6-\\TP4-GRUPO-6\\TP4-GRUPO-6\\ejercicio3.aspx.cs",
+              "RelativeDocumentMoniker": "TP4-GRUPO-6\\ejercicio3.aspx.cs",
+              "ToolTip": "C:\\Users\\Elvis\\OneDrive - frgp.utn.edu.ar\\Desktop\\Escritorio\\TP-4-GRUPO-6-\\TP4-GRUPO-6\\TP4-GRUPO-6\\ejercicio3.aspx.cs",
+              "RelativeToolTip": "TP4-GRUPO-6\\ejercicio3.aspx.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T22:00:45.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ejercicio3.aspx",
+              "DocumentMoniker": "C:\\Users\\Elvis\\OneDrive - frgp.utn.edu.ar\\Desktop\\Escritorio\\TP-4-GRUPO-6-\\TP4-GRUPO-6\\TP4-GRUPO-6\\ejercicio3.aspx",
+              "RelativeDocumentMoniker": "TP4-GRUPO-6\\ejercicio3.aspx",
+              "ToolTip": "C:\\Users\\Elvis\\OneDrive - frgp.utn.edu.ar\\Desktop\\Escritorio\\TP-4-GRUPO-6-\\TP4-GRUPO-6\\TP4-GRUPO-6\\ejercicio3.aspx",
+              "RelativeToolTip": "TP4-GRUPO-6\\ejercicio3.aspx",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-04-27T21:58:40.464Z",
               "EditorCaption": ""
             }
           ]

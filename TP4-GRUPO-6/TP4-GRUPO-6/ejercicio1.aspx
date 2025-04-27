@@ -52,7 +52,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style2">
-                        <asp:Label ID="Label1" runat="server" Font-Bold="True" Text="LOCALIDAD:"></asp:Label>
+                        <asp:Label ID="Label1" runat="server" Font-Bold="True" Text="Localidad:"></asp:Label>
                     </td>
                     <td class="auto-style4">
                         <asp:DropDownList ID="listaLocalidadesInicio" runat="server" Height="23px" Width="125px" AutoPostBack="True">

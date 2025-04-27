@@ -11,7 +11,10 @@
             width: 100%;
         }
         .auto-style2 {
-            width: 233px;
+            width: 120px;
+        }
+        .auto-style3 {
+            margin-left: 11px;
         }
     </style>
 </head>
@@ -23,12 +26,17 @@
                     <asp:Label ID="seleccionartema" runat="server" Text="Seleccionar Tema:"></asp:Label>
                 </td>
                 <td>
-                    <asp:DropDownList ID="DropDownList1" runat="server">
+                    <asp:DropDownList ID="ddlTemas" runat="server" CssClass="auto-style3">
                         <asp:ListItem Value="1">Tema 1</asp:ListItem>
                         <asp:ListItem Value="2">Tema 2</asp:ListItem>
                         <asp:ListItem Value="3">Tema 3</asp:ListItem>
                     </asp:DropDownList>
                 </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">
+                    &nbsp;</td>
+                <td>&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style2">
