@@ -13,6 +13,8 @@ namespace TP4_GRUPO_6
     {
         private const string cadenaConexion = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=Neptuno;Integrated Security=True";
         private const string consultaProductos = "SELECT IdProducto, NombreProducto, IdCategoría, CantidadPorUnidad, PrecioUnidad FROM Productos";
+        int maxIdProductos, maxIdCategoria;
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -24,6 +26,22 @@ namespace TP4_GRUPO_6
                     SqlDataReader productosReader = comando.ExecuteReader();
                     grillaProductos.DataSource = productosReader;
                     grillaProductos.DataBind();
+                    productosReader.Close();
+
+                    //Obtener los valores maximos de IdProductos 
+                    SqlCommand comandoIdProductos = new SqlCommand("SELECT MAX(IdProducto) FROM Productos", conexion);  
+                    maxIdProductos = (int)comandoIdProductos.ExecuteScalar();
+                    RVProductos.MaximumValue = maxIdProductos.ToString();
+                    //Se utiliza el .ToString() porque esa variable solo permite strings
+                    RVProductos.ErrorMessage = "Solo se permiten IDs del " + RVProductos.MinimumValue + " al " + RVProductos.MaximumValue;
+
+                    //Obtener los valores maximos de IdCategoria
+                    SqlCommand comandoIdCategoria = new SqlCommand("SELECT MAX(IdCategoría) FROM Productos", conexion);
+                    maxIdCategoria = (int)comandoIdCategoria.ExecuteScalar();
+                    RVCategoria.MaximumValue = maxIdCategoria.ToString();
+                    //Se utiliza el .ToString() porque esa variable solo permite strings
+                    RVCategoria.ErrorMessage = "Solo se permiten IDs del " + RVCategoria.MinimumValue + " al " + RVCategoria.MaximumValue;
+
                     conexion.Close();
                 }
             }
@@ -121,7 +139,7 @@ namespace TP4_GRUPO_6
                 using (SqlConnection conexion = new SqlConnection(cadenaConexion))
                 {
                     conexion.Open();
-                    string traertodo = "SELECT * FROM productos";
+                    string traertodo = "SELECT IdProducto, NombreProducto, IdCategoría, CantidadPorUnidad, PrecioUnidad FROM Productos";
                     SqlCommand comando = new SqlCommand(traertodo, conexion);
 
                     SqlDataReader productosReader = comando.ExecuteReader();

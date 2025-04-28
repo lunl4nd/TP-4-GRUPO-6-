@@ -48,7 +48,8 @@
                         <asp:TextBox ID="txtProducto" runat="server" CssClass="auto-style7" MaxLength="4" ValidationGroup="grupo1"></asp:TextBox>
                         <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtProducto" ErrorMessage="  Ingrese solo números" Font-Bold="True" ForeColor="Red" ValidationExpression="^\d{1,4}$" ValidationGroup="grupo1"></asp:RegularExpressionValidator>
                     </td>
-                    <td class="auto-style4">&nbsp; <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtProducto" Font-Bold="True" ForeColor="Red" ValidationGroup="grupo1">Debe ingresar un id Producto</asp:RequiredFieldValidator>
+                    <td class="auto-style4">&nbsp; 
+                        <asp:RangeValidator ID="RVProductos" runat="server" ControlToValidate="txtProducto" ForeColor="Red" MinimumValue="1" Type="Integer" ValidationGroup="grupo1"></asp:RangeValidator>
                     </td>
                     <td class="auto-style4"></td>
                     <td class="auto-style4"></td>
@@ -69,7 +70,8 @@
                         <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtCategoria" ErrorMessage="  Ingrese solo números" Font-Bold="True" ForeColor="Red" ValidationExpression="^\d{1,4}$" ValidationGroup="grupo2"></asp:RegularExpressionValidator>
                     </td>
                     <td>
-                        &nbsp;</td>
+                        <asp:RangeValidator ID="RVCategoria" runat="server" ControlToValidate="txtCategoria" ForeColor="Red" MinimumValue="1" Type="Integer" ValidationGroup="grupo1"></asp:RangeValidator>
+                    </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
