@@ -21,8 +21,14 @@ namespace TP4_GRUPO_6
                 {
                     string consultaLibros = "SELECT IdLibro, IdTema, Titulo, Precio, Autor FROM Libros WHERE IdTema = @IdTema";
                     conexion.Open();
-                    
+                    if (PreviousPage==null)
+                    {
+                        Server.Transfer("ejercicio3.aspx");
+                        return;
+                    }
+
                     int idTema = Convert.ToInt32(((DropDownList)PreviousPage.FindControl("ddlTemas")).SelectedValue);
+                    
                     SqlCommand comando = new SqlCommand(consultaLibros, conexion);
                     comando.Parameters.AddWithValue("@IdTema", idTema);
 
