@@ -18,7 +18,7 @@ namespace TP4_GRUPO_6
 
         protected void verlibros_Click(object sender, EventArgs e)
         {
-            Server.Transfer("ejercicio3b.aspx?Tema=" + ddlTemas.SelectedItem.Value);
+            Server.Transfer("ejercicio3b.aspx");
         }
     }
 }
