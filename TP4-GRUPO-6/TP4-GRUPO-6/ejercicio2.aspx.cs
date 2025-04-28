@@ -31,6 +31,7 @@ namespace TP4_GRUPO_6
 
         protected void filtrar_Click(object sender, EventArgs e)
         {
+            lblSinResultados.Visible = false;
             int idProductoSeleccionado;
             int idCategoriaSeleccionada;
 
@@ -126,13 +127,14 @@ namespace TP4_GRUPO_6
                     SqlDataReader productosReader = comando.ExecuteReader();
                     grillaProductos.DataSource = productosReader;
                     grillaProductos.DataBind();
-
+                    
                     productosReader.Close();
                     conexion.Close();
                 }
-
                 
             }
+                if (grillaProductos.Rows.Count == 0)
+                    lblSinResultados.Visible = true;
                 txtCategoria.Text = "";
                 txtProducto.Text = "";
         }

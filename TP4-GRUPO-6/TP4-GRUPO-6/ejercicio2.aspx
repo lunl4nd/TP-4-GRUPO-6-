@@ -45,9 +45,10 @@
                             <asp:ListItem Value="1">Mayor a:</asp:ListItem>
                             <asp:ListItem Value="2">Menor a:</asp:ListItem>
                         </asp:DropDownList>
-                        <asp:TextBox ID="txtProducto" runat="server" CssClass="auto-style7"></asp:TextBox>
+                        <asp:TextBox ID="txtProducto" runat="server" CssClass="auto-style7" MaxLength="4" ValidationGroup="grupo1"></asp:TextBox>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtProducto" ErrorMessage="  Ingrese solo números" Font-Bold="True" ForeColor="Red" ValidationExpression="^\d{1,4}$" ValidationGroup="grupo1"></asp:RegularExpressionValidator>
                     </td>
-                    <td class="auto-style4">&nbsp; <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtProducto" Font-Bold="True" ForeColor="Red" ValidationGroup="grupo1">debe ingresar un id Producto</asp:RequiredFieldValidator>
+                    <td class="auto-style4">&nbsp; <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtProducto" Font-Bold="True" ForeColor="Red" ValidationGroup="grupo1">Debe ingresar un id Producto</asp:RequiredFieldValidator>
                     </td>
                     <td class="auto-style4"></td>
                     <td class="auto-style4"></td>
@@ -64,11 +65,11 @@
                             <asp:ListItem Value="1">Mayor a:</asp:ListItem>
                             <asp:ListItem Value="2">Menor a:</asp:ListItem>
                         </asp:DropDownList>
-                        <asp:TextBox ID="txtCategoria" runat="server" Height="22px"></asp:TextBox>
+                        <asp:TextBox ID="txtCategoria" runat="server" Height="22px" MaxLength="4" ValidationGroup="grupo2"></asp:TextBox>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtCategoria" ErrorMessage="  Ingrese solo números" Font-Bold="True" ForeColor="Red" ValidationExpression="^\d{1,4}$" ValidationGroup="grupo2"></asp:RegularExpressionValidator>
                     </td>
                     <td>
-                        <asp:RequiredFieldValidator ID="rfvIDCategoria" runat="server" ControlToValidate="txtCategoria" Font-Bold="True" ForeColor="Red" ValidationGroup="grupo1">Ingrese un ID Categoria</asp:RequiredFieldValidator>
-                    </td>
+                        &nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -86,7 +87,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="filtrar" runat="server" OnClick="filtrar_Click" Text="Filtrar" ValidationGroup="1" />
+                        <asp:Button ID="filtrar" runat="server" OnClick="filtrar_Click" Text="Filtrar" ValidationGroup="grupo1" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Button ID="quitarFiltro" runat="server" Text="Quitar Filtro" OnClick="quitarFiltro_Click" />
                     </td>
@@ -110,6 +111,7 @@
                     <td class="auto-style2">
                         <asp:GridView ID="grillaProductos" runat="server">
                         </asp:GridView>
+                        <asp:Label ID="lblSinResultados" runat="server" Font-Bold="True" ForeColor="Red" Text="No se encontraron registros que coincidan con los criterios ingresados." Visible="False"></asp:Label>
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
